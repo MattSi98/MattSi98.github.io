@@ -29,7 +29,7 @@
 
     <section class="s2">
         <div class="main-container">
-            <h1 style="text-align: center;">Boids</h1>
+            <h1 style="text-align: center;">Flocking / Boids</h1>
             <hr>
 
             <div class="post-wrapper">
@@ -44,41 +44,56 @@
                     <div class="post-preview">
                         <h4 class="post-title" style="text-align: center;">Flocking Algorithm: Boids</h4>
                         <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
-                            the world map,
-                            and can search for other playlist markers created by users. Playlist markers only appear if
-                            the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
-                            musical tastes.
-                            Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
+                            This analgorithm, originally created by Craig Reynolds in 1986, simulates natural flocking
+                            patterns
+                            seen in nature (birds, fish, etc). The algorithm consists of three main 'steering
+                            behaviors':
+                            cohesion,
+                            alignment, and separation.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
+                            <b>Separation</b> is the behavior of agents avoiding each other. This requirment is only
+                            needed in simulations - objects in real life cannot travel through each other.
                         </p>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
+                            <b>Cohesion</b> is the behavior of agents attempting to adjust their position in the flock
+                            toward
+                            the average central location. This gives the effect of agents prefering large flocks instead
+                            of lone travel.
+                        </p>
+                        <p>
+                            <b>Alignment</b> is the behavior of agents attempting to travel in the same average heading.
+                            This
+                            gives the effect of the agents progressing to a common goal.
+                        </p>
+                        <p>
+                            I added object avoidance by using very simple ray casting from each agent, therefore objects
+                            in the scene can be dynamic and the flocks will avoid them - further simulating
+                            natural flocking.
+                            I created this 3D simulation by following Craig Reynolds paper as well as referencing a
+                            useful 2D tutorial.
                         </p>
                         <div class="post-intro-links-wrapper">
-                            <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
+                            <a href="https://github.com/MattSi98/Boids-Flocking-Algorithm" target="_blank"
                                 style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post1">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/prefab.PNG">
                         <div class="post-preview">
-                            <h6 class="post-title">User Profiles</h6>
-                            <p class="post-intro">Unity project following Craig Reynolds Flocking Algorithm to create
-                                beautiful flocks of animals in 3D space!</p>
+                            <h6 class="post-title">Agent Prefab</h6>
+                            <p class="post-intro">
+                                Using prefabs allowed me to create one generic agent, and then
+                                easily duplicate it to create large groups.
+                            </p>
+                            <p>
+                                This made annimating much simpler.  I only had to implement animations for one object,
+                                then add an offset to each duplicated agent so that the animation would look
+                                random.
+                            </p>
 
                         </div>
                     </div>
@@ -86,56 +101,20 @@
 
                 <div>
                     <div class="post2">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/behavior.PNG">
                         <div class="post-preview">
-                            <h6 class="post-title">Adding Playlists</h6>
-                            <p class="post-intro">A fully operational game of Monopoly built with Ocaml to be played in
-                                the
-                                terminal!</p>
+                            <h6 class="post-title">Behaviors</h6>
+                            <p class="post-intro">
+                                I created separate scripts for each behavior and then combine them in one composite script.
+                                This allowed me to add modifiers to each which could change the impact of each of the behaviors. 
+                            </p>
+                            <p>
+                                For example, I found that increasing the cohesion multiplier too much caused the flocks to look more robotic.
+                            </p>
 
                         </div>
                     </div>
                 </div>
-
-                <div class="main-post2">
-                    <div class="main-thumbnail-wrapper">
-                        <img class="main-thumbnail" src="../images/">
-                        <img class="main-thumbnail2" src="../images/">
-                    </div>
-
-                    <div class="post-preview">
-                        <h4 class="post-title" style="text-align: center;">SpotiFriend IOS App</h4>
-                        <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
-                            the world map,
-                            and can search for other playlist markers created by users. Playlist markers only appear if
-                            the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
-                            musical tastes.
-                            Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
-                        </p>
-                        <div class="post-intro-links-wrapper">
-                            <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
-                                style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
-                        </div>
-                    </div>
-                </div>
-                
-
-
 
             </div>
         </div>
@@ -149,21 +128,17 @@
             <div class="about-wrapper">
                 <div class="about-me">
                     <h4>More about the project</h4>
-                    <p>I am an ambitious and goal-oriented Computer Scientist with a wide variety of project
-                        experiences.
-                        I excel at innovating and coordinating with/leading others. I am passionate about artificial
-                        intelligence and
-                        the next generation of “smart” technologies.
+                    <p>
+                        I undertook this project to learn how to use Unity. Following this algorithm allowed me to
+                        learn scripting, prefabs, animations, 3D physics, materials, lighting, camera locations,
+                        vectors, asset utilization, and a basic understanding of Unity.
                     </p>
 
                     <p>
-                        I am the Electronics Sub-Team Lead for <a href="https://chemecar.engineering.cornell.edu/"
-                            target="_blank">Cornell ChemE Car.</a>
-                        Which is a competition based project team.
-                        I have held this role for 3 years and consider it one of the most valuble positions that I have
-                        held.
-                        It has given me an opportunity to learn how to lead effectively and collaborate successfully
-                        within a professional environment.
+                        To the right are images of <a href="#" target="_blank">Craig Reynold's Paper</a>
+                        and <a href="#" target="_blank">Board To Bits Games' Tutorial</a>. These were both great
+                        resources to follow.
+                        I also recommend Brackey's Unity tutorials on animation and prefabs in Unity.
                     </p>
 
 
@@ -171,55 +146,37 @@
 
                     <h4>Tools Used </h4>
 
-                    <p>
-                        I am most experienced in building back end solutions using Python, Java, or C.
-                    </p>
-                    <p>
-                        I am also a self taught web and IOS app developer, so I can develop creative tools to showcase
-                        backend algorithms.
-                    </p>
-
                     <div id="skills">
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Languages:</li>
                             <ul>
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>Swift 5</li>
-                                <li>OCaml</li>
-                                <li>C / C++</li>
-                                <li>HTML 5</li>
-                                <li>CSS 3</li>
+                                <li>C#</li>
                             </ul>
                         </ul>
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Technologies:</li>
                             <ul>
                                 <li>VS Code</li>
-                                <li>xCode 11</li>
                                 <li>GitHub</li>
-                                <li>Eclipse IDE</li>
                                 <li>Unity</li>
-                                <li>Oracle VM</li>
-                                <li>VIM</li>
                             </ul>
                         </ul>
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Tools:</li>
                             <ul>
-                                <li>Open CV</li>
-                                <li>pyTorch</li>
-                                <li>numpy</li>
-                                <li>Adobe XD</li>
-                                <li>REST API</li>
+                                <li>prefabs</li>
+                                <li>filters</li>
+                                <li>annimation</li>
+                                <li>colliders</li>
+                                <li></li>
                             </ul>
                         </ul>
                     </div>
                 </div>
                 <div class="social-links">
-                    <img id="social-image" src="../images/">
+                    <img id="social-image" src="../images/craigreynolds.PNG">
                     <br>
-                    <img id="social-image" src="../images/">
+                    <img id="social-image" src="../images/2dtutorial.PNG">
                 </div>
             </div>
         </div>

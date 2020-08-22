@@ -41,6 +41,9 @@ a{
 ul{
     list-style: none;
 }
+b{
+    color: #17a2b8;
+}
 
 h1 { font-size: 56px;}
 h2 { font-size: 36px;}
@@ -182,6 +185,7 @@ hr{
 }
 
 #social-image{
+    /* height: 350px; */
     width: 100%;
 }
 
@@ -248,7 +252,7 @@ hr{
 .thumbnail{
     display: block;
     width: 100%;
-    height: 250px;
+    height: 275px;
     object-fit: cover;
 }
 
