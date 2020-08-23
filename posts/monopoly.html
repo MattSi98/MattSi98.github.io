@@ -36,48 +36,63 @@
 
                 <div class="main-post">
                     <div class="main-thumbnail-wrapper">
-                        <img class="main-thumbnail" src="../images/">
-                        <img class="main-thumbnail2" src="../images/">
+                        <video src="../images/monopolygame.mp4" style="width: 100%;" controls autoplay loop
+                            muted></video>
                     </div>
 
                     <div class="post-preview">
-                        <h4 class="post-title" style="text-align: center;">SpotiFriend IOS App</h4>
+                        <h4 class="post-title" style="text-align: center;">Monopoly in the terminal</h4>
                         <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
-                            the world map,
-                            and can search for other playlist markers created by users. Playlist markers only appear if
-                            the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
-                            musical tastes.
-                            Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
+                            The final project for Cornell's 3110 OCaml course. Myself and two students: <b>Nicolas
+                                Vega</b> and
+                            <b>Haashim Shah</b> created this terminal based Monopoly Game. The game works as exactly
+                            like real Monopoly,
+                            however, Chance and Comm. Chest are not implemented.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
+                            We designed the game to be extremely robust utilizing <b>protected modules</b> that could only
+                            interface with each other in a strict hierarchy using specific functions to limit side effects causing errors.
+                            This standardized structure allowed for 
+                            indepth testing and error handling such that the game follows a logical path to develop, modify, and debug.
                         </p>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
+                            Notable items: we were not allowed to use a GUI, and the project was completed over the course of six
+                            weeks.
+                        </p>
+                        <p>
+                            I worked primarily on the <b>board printer and test suite</b> as well as helping the development of
+                            the properties class.
                         </p>
                         <div class="post-intro-links-wrapper">
-                            <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
+                            <a href="https://github.com/MattSi98/Terminal-Based-Monopoly" target="_blank"
                                 style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post1">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/monopolyboardprinter.PNG">
                         <div class="post-preview">
-                            <h6 class="post-title">User Profiles</h6>
-                            <p class="post-intro">Unity project following Craig Reynolds Flocking Algorithm to create
-                                beautiful flocks of animals in 3D space!</p>
+                            <h6 class="post-title">Board Printing</h6>
+                            <p class="post-intro">
+                                With no GUI use allowed, I was tasked with coming up with a fast way to effectively
+                                print the board each turn.
+                                I created a <b>[grid coord tuple : property string]</b> dictionary.
+                                This worked well because the board was hard coded and very little changed each turn.
+                                This allowed us to
+                                alter coordinates on a logical grid instead of a non-standardized board shape.
+                            </p>
+                            <p>
+                                A simple loop could print each 'square' of the grid and dictionary look ups are quite
+                                fast
+                                therefore it was a great solution to the issue of not having access to a GUI.
+                            </p>
+                            <p>
+                                Example: P1 moves from Go (position (31,11) in the grid) to Vermont Ave (position (31,3) in the grid).
+                                We simply update the dictionary entry with key (33,3) to have the value P1, and remove that value from thw
+                                entry with key (33,11). View video for reference.
+                            </p>
 
                         </div>
                     </div>
@@ -85,56 +100,33 @@
 
                 <div>
                     <div class="post2">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/monopolytests.PNG">
                         <div class="post-preview">
-                            <h6 class="post-title">Adding Playlists</h6>
-                            <p class="post-intro">A fully operational game of Monopoly built with Ocaml to be played in
-                                the
-                                terminal!</p>
+                            <h6 class="post-title">Test Suite</h6>
+                            <p class="post-intro">
+                                I volunteered to write the required test suite as I had just read how to utilize both <b>black and white
+                                box testing</b> to ensure game/method correctness.
+                            </p>
+                            <p>
+                                <b>Black Box:</b> I created many premade game states to test the possible playable games. Then I ran
+                                moves on those - checking correctness along the way.
+                            </p>
+                            <p>
+                                <b>White Box:</b> I also tested each function individually on multitudes of input output combinations to
+                                ensure
+                                each method followed expected behavior even when not in a game state.
+                            </p>
+                            <p>
+                                Finally we performed many hours of <b>play testing</b>, and error handle checks to ensure no
+                                side effects caused fatal crashes.
+
+                            </p>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="main-post2">
-                    <div class="main-thumbnail-wrapper">
-                        <img class="main-thumbnail" src="../images/">
-                        <img class="main-thumbnail2" src="../images/">
-                    </div>
-
-                    <div class="post-preview">
-                        <h4 class="post-title" style="text-align: center;">SpotiFriend IOS App</h4>
-                        <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
-                            the world map,
-                            and can search for other playlist markers created by users. Playlist markers only appear if
-                            the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
-                            musical tastes.
-                            Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
-                        </p>
-                        <div class="post-intro-links-wrapper">
-                            <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
-                                style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
-                        </div>
-                    </div>
-                </div>
-                
-
-
+            
 
             </div>
         </div>
@@ -148,21 +140,16 @@
             <div class="about-wrapper">
                 <div class="about-me">
                     <h4>More about the project</h4>
-                    <p>I am an ambitious and goal-oriented Computer Scientist with a wide variety of project
-                        experiences.
-                        I excel at innovating and coordinating with/leading others. I am passionate about artificial
-                        intelligence and
-                        the next generation of “smart” technologies.
+                    <p>
+                        This taught me a tremendous amount about proper program structure and the importance of
+                        <b>abstracting certain tasks</b> from the user and from other functions within a program.
+                        Alongside this, I learned how to: code with a test driven strategy, work effectively in a group,
+                        use pattern matching, recursion, and how to program in a <b>functional language.</b>
                     </p>
 
                     <p>
-                        I am the Electronics Sub-Team Lead for <a href="https://chemecar.engineering.cornell.edu/"
-                            target="_blank">Cornell ChemE Car.</a>
-                        Which is a competition based project team.
-                        I have held this role for 3 years and consider it one of the most valuble positions that I have
-                        held.
-                        It has given me an opportunity to learn how to lead effectively and collaborate successfully
-                        within a professional environment.
+                        I hihgly recommend recreating simple games in new languages as a way to learn the syntax and semantics in a 
+                        fun effective way.
                     </p>
 
 
@@ -170,55 +157,36 @@
 
                     <h4>Tools Used </h4>
 
-                    <p>
-                        I am most experienced in building back end solutions using Python, Java, or C.
-                    </p>
-                    <p>
-                        I am also a self taught web and IOS app developer, so I can develop creative tools to showcase
-                        backend algorithms.
-                    </p>
-
                     <div id="skills">
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Languages:</li>
                             <ul>
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>Swift 5</li>
                                 <li>OCaml</li>
-                                <li>C / C++</li>
-                                <li>HTML 5</li>
-                                <li>CSS 3</li>
                             </ul>
                         </ul>
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Technologies:</li>
                             <ul>
                                 <li>VS Code</li>
-                                <li>xCode 11</li>
                                 <li>GitHub</li>
-                                <li>Eclipse IDE</li>
-                                <li>Unity</li>
-                                <li>Oracle VM</li>
-                                <li>VIM</li>
+                                <li>Terminal</li>
                             </ul>
                         </ul>
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Tools:</li>
                             <ul>
-                                <li>Open CV</li>
-                                <li>pyTorch</li>
-                                <li>numpy</li>
-                                <li>Adobe XD</li>
-                                <li>REST API</li>
+                                <li>OUnit Tests</li>
+                                <li>Pattern-Matching</li>
+                                <li>OcamlBuild</li>
+                                <li>Recursion</li>
                             </ul>
                         </ul>
                     </div>
                 </div>
                 <div class="social-links">
-                    <img id="social-image" src="../images/">
-                    <br>
-                    <img id="social-image" src="../images/">
+                    <img id="social-image" src="../images/monopoly.PNG">
+                    <!-- <br>
+                    <img id="social-image" src="../images/"> -->
                 </div>
             </div>
         </div>
