@@ -36,104 +36,83 @@
 
                 <div class="main-post">
                     <div class="main-thumbnail-wrapper">
-                        <img class="main-thumbnail" src="../images/">
-                        <img class="main-thumbnail2" src="../images/">
+                        <video src="../images/smartRockets.mp4" style="width: 100%;" controls autoplay loop
+                            muted></video>
                     </div>
 
                     <div class="post-preview">
                         <h4 class="post-title" style="text-align: center;">SpotiFriend IOS App</h4>
                         <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
-                            the world map,
-                            and can search for other playlist markers created by users. Playlist markers only appear if
-                            the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
-                            musical tastes.
-                            Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
+                            This project was completed by Myself, Erie Adams, and Nicholas Robinson, as the final
+                            project for our Artificial Intelligence Practicum.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
+                            The goal was to create a game-like program where users could edit the attributes of the
+                            rockets
+                            in attempt to see how different factors effect Genetic Algorithms. Users can alter: mutation
+                            rate, speed, number of agents, and turn frequency.
                         </p>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
+                            The rockets then must complete different mazes, forcing the user to improve their parameters
+                            - thus enforcing their understanding of the algorithm. The <b>fitness function </b>was the
+                            most difficult aspect of this project. We settled on using a distance and time based
+                            function -
+                            rewarding rockets that got close to the goal quickly. We also used many different <b>mating
+                                strategies</b>, settling on each rocket getting 1/2 of its 'genes' from either parent
+                            (randomly
+                            chosen from most fit agents). The 'genes' are acceleration vectors which the rocket follows
+                            post spawn, and are chosen: odds from parent 1 and evens from parent 2.
+                            Rockets were limited to 50 genes - thus extremely long courses are not viable.
                         </p>
                         <div class="post-intro-links-wrapper">
-                            <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
+                            <a href="https://github.com/MattSi98/Genetic-Smart-Rockets" target="_blank"
                                 style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post1">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/fitnessfunction2.PNG" style="object-fit: fill; height: 100%;">
                         <div class="post-preview">
-                            <h6 class="post-title">User Profiles</h6>
-                            <p class="post-intro">Unity project following Craig Reynolds Flocking Algorithm to create
-                                beautiful flocks of animals in 3D space!</p>
-
+                            <h6 class="post-title">Fitness Functions</h6>
+                            <p class="post-intro">
+                                We tried many fitness functions to determine the 'success' of each rocket.
+                                For example, minimum distance to target, shortest time to target, least 'genes' used,
+                                etc.
+                            </p>
+                            <p>
+                                We found that a combination of minimum distance and minimum time worked best. We added a
+                                large <b>multiplier</b> to those rockets that did reach the target. This ensures that
+                                the
+                                rockets converge on a successful set of 'genes' very quickly once a few succeed.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post2">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/mutationRate.PNG" style="object-fit: fill; height: 100%;">
                         <div class="post-preview">
-                            <h6 class="post-title">Adding Playlists</h6>
-                            <p class="post-intro">A fully operational game of Monopoly built with Ocaml to be played in
-                                the
-                                terminal!</p>
+                            <h6 class="post-title">Mutation Rate</h6>
+                            <p class="post-intro">
+                                Mutations were a tricky aspect of the project. Many different mutation rates seemed to work
+                                well.
+                                This goes against the common notion that faster/more mutations would cause the rockets
+                                to succeed faster/more frequently.
+                                However, this <b>did not seem to be the case</b> (at least on the limited amount of maps
+                                we
+                                tested on).
+                            </p>
+                            <p>
+                                Thus, we chose to let the user alter this as well, and simply start it at a successful
+                                default value, which we determined during testing.
+                            </p>
 
                         </div>
                     </div>
                 </div>
-
-                <div class="main-post2">
-                    <div class="main-thumbnail-wrapper">
-                        <img class="main-thumbnail" src="../images/">
-                        <img class="main-thumbnail2" src="../images/">
-                    </div>
-
-                    <div class="post-preview">
-                        <h4 class="post-title" style="text-align: center;">SpotiFriend IOS App</h4>
-                        <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
-                            the world map,
-                            and can search for other playlist markers created by users. Playlist markers only appear if
-                            the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
-                            musical tastes.
-                            Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
-                        </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
-                        </p>
-                        <div class="post-intro-links-wrapper">
-                            <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
-                                style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
-                        </div>
-                    </div>
-                </div>
-                
-
 
 
             </div>
@@ -148,77 +127,74 @@
             <div class="about-wrapper">
                 <div class="about-me">
                     <h4>More about the project</h4>
-                    <p>I am an ambitious and goal-oriented Computer Scientist with a wide variety of project
-                        experiences.
-                        I excel at innovating and coordinating with/leading others. I am passionate about artificial
-                        intelligence and
-                        the next generation of “smart” technologies.
+                    <p>
+                        To the right is the hardest map. This took our best rockets over 200 generations to complete.
                     </p>
 
                     <p>
-                        I am the Electronics Sub-Team Lead for <a href="https://chemecar.engineering.cornell.edu/"
-                            target="_blank">Cornell ChemE Car.</a>
-                        Which is a competition based project team.
-                        I have held this role for 3 years and consider it one of the most valuble positions that I have
-                        held.
-                        It has given me an opportunity to learn how to lead effectively and collaborate successfully
-                        within a professional environment.
+                        A large breakthrough in getting the rockets to train faster was to implement a <b>pseudo
+                            memory.</b>
+                        Allowing rockets to have <b>checkpoints</b>, which if they made it to, would lock their genes.
+                        This
+                        removed the need to relearn earlier parts of the course, and drastically decreased the number of
+                        generations it took to complete harder mazes.
+
+
                     </p>
 
+                    <p>
+                        Our statistics:
+
+                    <ul>
+                        <li>
+                            <b>Easy maze:</b> ~ 12 generations
+                        </li>
+                        <li>
+                            <b>Medium maze:</b> ~ 50 generations
+                        </li>
+                        <li>
+                            <b>Hard maze:</b> over 200 - very irratic.
+                        </li>
+                        <li>
+                            <b>Spiral maze:</b> immpossible - did not deploy this to users - took thousands of
+                            generations to complete.
+                        </li>
+                    </ul>
+                    </p>
 
                     <hr>
 
                     <h4>Tools Used </h4>
 
-                    <p>
-                        I am most experienced in building back end solutions using Python, Java, or C.
-                    </p>
-                    <p>
-                        I am also a self taught web and IOS app developer, so I can develop creative tools to showcase
-                        backend algorithms.
-                    </p>
-
                     <div id="skills">
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Languages:</li>
                             <ul>
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>Swift 5</li>
-                                <li>OCaml</li>
-                                <li>C / C++</li>
-                                <li>HTML 5</li>
-                                <li>CSS 3</li>
+                                <li>C#</li>
                             </ul>
                         </ul>
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Technologies:</li>
                             <ul>
                                 <li>VS Code</li>
-                                <li>xCode 11</li>
                                 <li>GitHub</li>
-                                <li>Eclipse IDE</li>
                                 <li>Unity</li>
-                                <li>Oracle VM</li>
-                                <li>VIM</li>
                             </ul>
                         </ul>
                         <ul>
                             <li style="font-size: large; color: #17a2b8;">Tools:</li>
                             <ul>
-                                <li>Open CV</li>
-                                <li>pyTorch</li>
-                                <li>numpy</li>
-                                <li>Adobe XD</li>
-                                <li>REST API</li>
+                                <li>Fitness Func</li>
+                                <li>Mutation rate</li>
+                                <li>Mating style</li>
+                                <li>2D physics</li>
+                                <li>Colliders</li>
                             </ul>
                         </ul>
                     </div>
                 </div>
                 <div class="social-links">
-                    <img id="social-image" src="../images/">
-                    <br>
-                    <img id="social-image" src="../images/">
+                    <img id="social-image" src="../images/smartRocketsHard.PNG">
                 </div>
             </div>
         </div>
