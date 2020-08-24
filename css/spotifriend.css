@@ -38,8 +38,12 @@ a{
     font-size: large;
 }
 
+li{
+    font-size: medium;
+}
 ul{
     list-style: none;
+    padding-inline-start: 20px;
 }
 
 h1 { font-size: 56px;}
@@ -165,13 +169,14 @@ hr{
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     padding-top: 50px;
     padding-bottom: 50px;
-    gap: 100px;
+    gap: 50px;
 }
 
 #skills{
     display: flex;
     justify-content: space-evenly;
     background-color: var(--previewShadow);
+    width: 100%;
 }
 
 .social-links{
@@ -191,7 +196,7 @@ hr{
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 30px;
     grid-template-areas: 
-        'main-post main-post ' 
+        'main-post main-post' 
         'post1 post2'
         'main-post2 main-post2';
 
@@ -277,7 +282,7 @@ hr{
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
     .intro-wrapper{
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -290,5 +295,42 @@ hr{
     .right-column{
         padding: 30px;
         justify-content: center;
+    } 
+
+    ul{
+        padding-inline-end: 10px;
+        padding-inline-start: 20px;
+    }
+
+    .about-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        gap: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    .post-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 60px 30px;
+        grid-template-areas: 
+            'main-post ' 
+            'post1' 
+            'post2'
+            'main-post2';
+    
+    
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .post-intro-links-wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 }
