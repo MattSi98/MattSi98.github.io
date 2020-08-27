@@ -36,103 +36,147 @@
 
                 <div class="main-post">
                     <div class="main-thumbnail-wrapper">
-                        <img class="main-thumbnail" src="../images/">
-                        <img class="main-thumbnail2" src="../images/">
+                        <img class="main-thumbnail-100" src="../images/spotiFriendMain.png">
                     </div>
 
                     <div class="post-preview">
                         <h4 class="post-title" style="text-align: center;">SpotiFriend IOS App</h4>
                         <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
+                            Location based <b>music discovery/playlist app</b>. Users place custom markers on
                             the world map,
                             and can search for other playlist markers created by users. Playlist markers only appear if
                             the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
+                            range of them, thus creates insentive to <b>explore</b> areas around the globe and discover their
                             musical tastes.
                             Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
+                            take the user to that playlist and begin playback.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
+                            Master playlists are curated playlists that are location specific and are intended to be a
+                            <b>taste of that areas musicical talent</b>.
+                            User playlists can be placed anywhere, by any user, and can contain any music style.
+                            The master playlists stay on the map indefinitley, while user generated markers will be
+                            deleted weekly. This ensures the world map remains usable over time.
                         </p>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
+                            I developed this app to learn IOS App development
+                            tools: xCode, Swift, Firebase, and swiftUI.
                         </p>
                         <div class="post-intro-links-wrapper">
                             <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
                                 style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
+                            <a href="../posts/comingSoon.html" target="_blank">Download App from IOS AppStore</a>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post1">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/userProfiles.png">
                         <div class="post-preview">
                             <h6 class="post-title">User Profiles</h6>
-                            <p class="post-intro">Unity project following Craig Reynolds Flocking Algorithm to create
-                                beautiful flocks of animals in 3D space!</p>
-
+                            <p class="post-intro">
+                                Each user can create their own profile which allows them to post playlists to the world
+                                map.
+                                Users can change their <b>profile picture</b>, which will change the annotation that is placed
+                                on the map when they create a playlist (as seen above).
+                            </p>
+                            <p>
+                                Users also have two score features that track the amount of playlists that they have
+                                created, as well as the amount of playlists that they have discovered.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post2">
-                        <img class="thumbnail" src="../images/">
+                        <img class="thumbnail" src="../images/addPlaylist.PNG">
                         <div class="post-preview">
                             <h6 class="post-title">Adding Playlists</h6>
-                            <p class="post-intro">A fully operational game of Monopoly built with Ocaml to be played in
-                                the
-                                terminal!</p>
+                            <p class="post-intro">
+                                A user can add a playlist to any location on the world map - they do not need to be
+                                there physically.
+                                This allows users the ability to <b>share their music passion globally</b> - without the need
+                                for travel.
+
+                            </p>
+                            <p>
+                                However, users can only see playlists that are near their physical location - which
+                                maintains the
+                                main theme of location based music discovery.
+                            </p>
 
                         </div>
                     </div>
                 </div>
+
+                
+                    <div class="post3">
+                        <div class="main-thumbnail-wrapper">
+                            <img class="main-thumbnail" style="width: 49.5%;" src="../images/firestore3.png">
+                            <img class="main-thumbnail2" style="width: 49.5%;" src="../images/firestore.png">
+                        </div>
+                        
+                        <div class="post-preview">
+                            <h6 class="post-title">Firebase Usage</h6>
+                            <p class="post-intro">
+                                The key tool behind th eentire app is Firebase - a Database provided by Google.
+                                I became quite adept at using this service as it handles: user authentication, all map
+                                data, all userInfo, and all playlist data.
+                                Firebase user <b>authentication</b> is wonderful and made creating profiles/log in/sign up
+                                seamless and easy.
+                                The Firestore <b>Database</b> is used to handle all userInfo, and playlist data - such as
+                                location, date created, author, titiel, etc.
+                                Finally, I used the <b>Storage</b> feature to store the user's profile pictures.
+                            </p>
+                            <p>
+                                I also adopted a simple node JS script to easily upload all of the many curated master
+                                playlists. This provided a fast scalable way
+                                to import large amounts of data. Firebase also offers plans that scale with the size of
+                                the
+                                project from free -> paid. I cannot recommend this service enough, and I am extremely
+                                glad that I learned hwo to use it effectively.
+                            </p>
+
+                        </div>
+                    </div>
 
                 <div class="main-post2">
                     <div class="main-thumbnail-wrapper">
-                        <img class="main-thumbnail" src="../images/">
-                        <img class="main-thumbnail2" src="../images/">
+                        <img class="main-thumbnail-100" src="../images/spotifyPlaylistSearch.png">
                     </div>
 
                     <div class="post-preview">
-                        <h4 class="post-title" style="text-align: center;">SpotiFriend IOS App</h4>
+                        <h4 class="post-title" style="text-align: center;">Core Idea</h4>
                         <p class="post-intro">
-                            Location based music discovery/playlist app. Users place custom markers on
-                            the world map,
-                            and can search for other playlist markers created by users. Playlist markers only appear if
-                            the user is in
-                            range of them, thus creates insentive to explore areas around the globe and discover their
-                            musical tastes.
-                            Each playlist is linked to a Spotify playlist, and when tapped will
-                            take the user to that playlist and begin playback. Created to learn IOS App development
-                            tools: xCode, Swift, and swiftUI.
+                            This app is designed to implement an easy way to explore the music of any region that a user
+                            is currently in.
+                            For example, while on travel a user can look to see the playlists being shared near them, to
+                            get a  <b>preview
+                                of the local music scene</b>. The user can also find the curated playlists which are more formal
+                            introductions
+                            to local artists.
+
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in voluptas quae aperiam amet
-                            autem earum facere explicabo quaerat numquam! Quod ipsum nisi, ex illum dolores veritatis
-                            quam nostrum esse!
+                            This is also a platform that will hopefully <b>generate a community</b> of passionate music lovers
+                            who use the app to
+                            share music tastes gloablly. Any user can place their favorite playlist at any location, and
+                            can therefore share their best playlists
+                            to other users around the world. I hope the app will be used to share music styles across
+                            great distances and create a community
+                            from people who would otherwise just be strangers.
                         </p>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita aut, eligendi velit
-                            impedit quod, hic ab quasi blanditiis autem non nobis aliquid architecto laudantium. Officia
-                            quia assumenda inventore praesentium ab.
-                        </p>
+
                         <div class="post-intro-links-wrapper">
                             <a href="https://github.com/MattSi98/SpotiFriend" target="_blank"
                                 style="color:rgb(48,209,88);">Source Code</a>
-                            <a href="#">Download App from IOS AppStore</a>
+                            <a href="../posts/comingSoon.html" target="_blank">Download App from IOS AppStore</a>
                         </div>
                     </div>
                 </div>
-                
+
 
 
 
@@ -148,35 +192,35 @@
             <div class="about-wrapper">
                 <div class="about-me">
                     <h4>More about the project</h4>
-                    <p>I am an ambitious and goal-oriented Computer Scientist with a wide variety of project
-                        experiences.
-                        I excel at innovating and coordinating with/leading others. I am passionate about artificial
-                        intelligence and
-                        the next generation of “smart” technologies.
+                    <p>
+                        I undertook this project to learn the tools and the process of creating mobile IOS apps. I chose
+                        to do this during the <b>COVID-19</b>
+                        lockdown as the pandemic had sidetracked my work opportunities, and I wanted to use the time to
+                        be productive and follow this idea.
+
                     </p>
 
                     <p>
-                        I am the Electronics Sub-Team Lead for <a href="https://chemecar.engineering.cornell.edu/"
-                            target="_blank">Cornell ChemE Car.</a>
-                        Which is a competition based project team.
-                        I have held this role for 3 years and consider it one of the most valuble positions that I have
-                        held.
-                        It has given me an opportunity to learn how to lead effectively and collaborate successfully
-                        within a professional environment.
+                        Previously, I had never owned or used a Mac, so it is fair to say that the journey began there.
+                        I started, in my typical fashon, of jumping right into development. This was a mistake.
+                        I soon realized that relying on 3yrs of CS courses <b style="color: red;">(Go Big Red)</b> and a few videos on xCode/Swift
+                        was not going to produce the product that I envisioned.
+                        Therefore, I enrolled in a <b>Udemy course</b> that taught me everything I needed to know to get
+                        started. The course walked me through: how to use xCode, I earned two levels of certification
+                        for Swift 5, and taught me how to post the final product on the AppStore. This foundation of
+                        basics allowed me to
+                        create a logical roadmap on <b>Trello</b>, and to truly begin development!
+                    </p>
+                    <p>
+                        I began development in early July of 2020, and am currently (Sept 2020) in the process of
+                        deploying version 1.0 of my app to the <b>IOS AppStore</b>.
+                        I intend to update the app and continue to add features during the year.
                     </p>
 
 
                     <hr>
 
                     <h4>Tools Used </h4>
-
-                    <p>
-                        I am most experienced in building back end solutions using Python, Java, or C.
-                    </p>
-                    <p>
-                        I am also a self taught web and IOS app developer, so I can develop creative tools to showcase
-                        backend algorithms.
-                    </p>
 
                     <div id="skills">
                         <ul>
@@ -208,9 +252,9 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <img id="social-image" src="../images/">
+                    <img id="social-image" src="../images/udemyCert.png">
                     <br>
-                    <img id="social-image" src="../images/">
+                    <img id="social-image" src="../images/trello.png">
                 </div>
             </div>
         </div>

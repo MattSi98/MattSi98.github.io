@@ -30,11 +30,14 @@ p, li, span, label, input, textarea {
     font-family: 'Roboto Mono', monospace;
     
 }
+b{
+    color: #a36aff;
+}
 
 a{
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
-    color: #8036f8;
+    color: #a36aff;
     font-size: large;
 }
 
@@ -198,6 +201,7 @@ hr{
     grid-template-areas: 
         'main-post main-post' 
         'post1 post2'
+        'post3 post3'
         'main-post2 main-post2';
 
 
@@ -205,7 +209,16 @@ hr{
     padding-bottom: 50px;
 }
 
-.post1, .post2, .post3{
+.post1, .post2{
+    border: 1px solid var(--borderColor);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+.post3{
+    grid-area: post3;
     border: 1px solid var(--borderColor);
 
     -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -239,11 +252,17 @@ hr{
     justify-content: space-evenly;
 }
 
+.main-thumbnail-100{
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+}
 .main-thumbnail{
     width: 65%;
     height: 400px;
-    object-fit: cover;
+    object-fit: fill;
 }
+
 .main-thumbnail2{
     width: 35%;
     height: 400px;
@@ -253,8 +272,8 @@ hr{
 .thumbnail{
     display: block;
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 400px;
+    object-fit: scale-down;
 }
 
 .post-preview{
@@ -321,6 +340,7 @@ hr{
             'main-post ' 
             'post1' 
             'post2'
+            'post3'
             'main-post2';
     
     
@@ -332,5 +352,23 @@ hr{
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+
+
+    .main-thumbnail-100{
+        width: 100%;
+        height: 400px;
+        object-fit: scale-down;
+    }
+    .main-thumbnail{
+        width: 65%;
+        height: 400px;
+        object-fit: cover;
+    }
+    
+    .main-thumbnail2{
+        width: 35%;
+        height: 400px;
+        object-fit: cover;
     }
 }
